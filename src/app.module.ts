@@ -8,6 +8,7 @@ import { AppService } from './app.service';
 import { join } from 'path';
 import { ItemsModule } from './items/items.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -28,7 +29,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       synchronize: true,
       autoLoadEntities: true
     }),
-    ItemsModule
+    ItemsModule,
+    UsersModule
   ],
   controllers: [AppController],
   providers: [AppService],
